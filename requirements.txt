@@ -2,3 +2,6 @@ streamlit
 streamlit-folium
 folium
 geopy
+pdfplumber
+pandas
+numpy
