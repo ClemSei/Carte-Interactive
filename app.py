@@ -12,17 +12,6 @@ import re
 # --- CONFIGURATION GÉNÉRALE ---
 st.set_page_config(layout="wide", page_title="Fédération Colombophile - Portail")
 
-# --- DONNÉES PARTAGÉES ---
-all_points = [
-    {"nom": "Pau", "lat": 43.3073, "lon": -0.3202, "rayon": 720000, "coul": "green"},
-    {"nom": "Agen", "lat": 43.8883, "lon": 1.0064, "rayon": 700000, "coul": "blue"},
-    {"nom": "Barcelone", "lat": 41.2199, "lon": 2.2828, "rayon": 865000, "coul": "red"},
-    {"nom": "Dax", "lat": 43.6714, "lon": -1.0406, "rayon": 703000, "coul": "orange"},
-    {"nom": "Marseille", "lat": 43.2962, "lon": 5.6133, "rayon": 675000, "coul": "purple"},
-    {"nom": "Narbonne", "lat": 43.1009, "lon": 2.1713, "rayon": 700000, "coul": "cadetblue"},
-    {"nom": "Perpignan", "lat": 42.6051, "lon": 3.0227, "rayon": 725000, "coul": "pink"}
-]
-
 # --- MENU DE NAVIGATION ---
 st.sidebar.title("🕊️ Portail Colombophile")
 page = st.sidebar.radio("Navigation", ["Analyse des Concours", "Résultats des Concours", "Informations"])
@@ -37,14 +26,14 @@ if page == "Analyse des Concours":
 
     # --- 1. DONNÉES (Rayons immenses) ---
     all_points = [
-        {"nom": "Pau", "lat": 43.3073, "lon": -0.3202, "rayon": 720000, "coul": "green"},
-        {"nom": "Agen", "lat": 43.8883, "lon": 1.0064, "rayon": 700000, "coul": "blue"},
-        {"nom": "Barcelone", "lat": 41.2199, "lon": 2.2828, "rayon": 865000, "coul": "red"},
-        {"nom": "Dax", "lat": 43.6714, "lon": -1.0406, "rayon": 703000, "coul": "orange"},
-        {"nom": "Marseille", "lat": 43.2962, "lon": 5.6133, "rayon": 675000, "coul": "purple"},
-        {"nom": "Narbonne", "lat": 43.1009, "lon": 2.1713, "rayon": 700000, "coul": "cadetblue"},
-        {"nom": "Perpignan", "lat": 42.6051, "lon": 3.0227, "rayon": 725000, "coul": "pink"}
-    ]
+    {"nom": "Pau", "lat": 43.3073, "lon": -0.3202, "rayon": 720000, "coul": "green"},
+    {"nom": "Agen", "lat": 43.8883, "lon": 1.0064, "rayon": 700000, "coul": "blue"},
+    {"nom": "Barcelone", "lat": 41.4030556, "lon": 2.215555555555556, "rayon": 865000, "coul": "red"},
+    {"nom": "Dax", "lat": 43.6714, "lon": -1.0406, "rayon": 703000, "coul": "orange"},
+    {"nom": "Marseille", "lat": 43.2962, "lon": 5.6133, "rayon": 675000, "coul": "purple"},
+    {"nom": "Narbonne", "lat": 43.2785278, "lon": 2.597027777777778, "rayon": 700000, "coul": "cadetblue"},
+    {"nom": "Perpignan", "lat": 42.6051, "lon": 3.0227, "rayon": 725000, "coul": "pink"}
+]
 
     # Couleurs des zones de fond (Nombre de concours)
     couleurs_zones = {
